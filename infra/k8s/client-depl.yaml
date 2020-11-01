@@ -14,13 +14,14 @@ spec:
     spec:
       containers:
         - name: client
-          image: dividedbyzero360/client
+          image: docker.io/dividedbyzero360/client
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: client-srv
 spec:
+  type: ClusterIP
   selector:
     app: client
   ports:
